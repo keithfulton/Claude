@@ -1,0 +1,26 @@
+:root{
+/* Brand */
+--cohere-black:#000000;--cohere-primary:#17171c;--cohere-ink:#212121;--cohere-deep-green:#003c33;--cohere-dark-navy:#071829;
+/* Surfaces */
+--cohere-canvas:#ffffff;--cohere-soft-stone:#eeece7;--cohere-pale-green:#edfce9;--cohere-pale-blue:#f1f5ff;
+/* Rules */
+--cohere-hairline:#d9d9dd;--cohere-border-light:#e5e7eb;--cohere-card-border:#f2f2f2;
+/* Text greys */
+--cohere-muted:#93939f;--cohere-slate:#75758a;--cohere-body-muted:#616161;
+/* Accents */
+--cohere-action-blue:#1863dc;--cohere-focus-blue:#4c6ee6;--cohere-coral:#ff7759;--cohere-coral-soft:#ffad9b;--cohere-form-focus:#9b60aa;--cohere-error:#b30000;
+--cohere-on-primary:#ffffff;--cohere-on-dark:#ffffff;
+
+/* Semantic aliases */
+--surface-page:var(--cohere-canvas);--surface-card:var(--cohere-canvas);--surface-warm:var(--cohere-soft-stone);
+--surface-inverse:var(--cohere-primary);--surface-announcement:var(--cohere-black);
+--surface-band-green:var(--cohere-deep-green);--surface-band-navy:var(--cohere-dark-navy);
+--surface-wash-green:var(--cohere-pale-green);--surface-wash-blue:var(--cohere-pale-blue);
+--surface-dark-translucent:rgba(255,255,255,0.06);--border-dark-translucent:rgba(255,255,255,0.16);
+--text-strong:var(--cohere-black);--text-body:var(--cohere-ink);--text-secondary:var(--cohere-body-muted);
+--text-tertiary:var(--cohere-slate);--text-meta:var(--cohere-muted);--text-on-dark:var(--cohere-on-dark);
+--text-on-dark-muted:rgba(255,255,255,0.64);--text-link:var(--cohere-action-blue);--text-taxonomy:var(--cohere-coral);
+--border-rule:var(--cohere-hairline);--border-subtle:var(--cohere-border-light);--border-card:var(--cohere-card-border);
+--action-primary-bg:var(--cohere-primary);--action-primary-fg:var(--cohere-on-primary);
+--focus-ring:var(--cohere-focus-blue);--input-focus:var(--cohere-form-focus);--status-error:var(--cohere-error);
+}

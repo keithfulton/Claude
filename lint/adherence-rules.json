@@ -1,0 +1,86 @@
+[
+  {
+    "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+    "message": "Raw hex color \u2014 use a design-system color token via var()."
+  },
+  {
+    "selector": "Literal[value=/\\b\\d+px\\b/]",
+    "message": "Raw px value \u2014 use a design-system spacing token via var()."
+  },
+  {
+    "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inter|Space Grotesk|Space Mono|var\\())/i]",
+    "message": "Font not provided by the design system. Use var(--font-display | --font-sans | --font-mono)."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='AgentConsoleCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:agent|status|integrations|prompt|responses|width|style|key|ref|className|style|children)$/]",
+    "message": "<AgentConsoleCard> doesn't accept that prop. Declared props: agent, status, integrations, prompt, responses, width, style."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='AnnouncementBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|linkLabel|href|onClose|key|ref|className|style|children)$/]",
+    "message": "<AnnouncementBar> doesn't accept that prop. Declared props: children, linkLabel, href, onClose."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='BlogFilterChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|active|onClick|key|ref|className|style|children)$/]",
+    "message": "<BlogFilterChip> doesn't accept that prop. Declared props: children, active, onClick."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|onDark|icon|children|disabled|href|onClick|type|style|key|ref|className|style|children)$/]",
+    "message": "<Button> doesn't accept that prop. Declared props: variant, onDark, icon, children, disabled, href, onClick, type, style."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|pill-outline)$/]",
+    "message": "<Button> variant must be one of 'primary' | 'secondary' | 'pill-outline'."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='type'] > Literal[value!=/^(?:button|submit)$/]",
+    "message": "<Button> type must be one of 'button' | 'submit'."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='CapabilityCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|title|children|linkLabel|href|onDark|boxed|key|ref|className|style|children)$/]",
+    "message": "<CapabilityCard> doesn't accept that prop. Declared props: icon, title, children, linkLabel, href, onDark, boxed."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='DarkFeatureBand'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|eyebrow|title|lead|children|style|key|ref|className|style|children)$/]",
+    "message": "<DarkFeatureBand> doesn't accept that prop. Declared props: tone, eyebrow, title, lead, children, style."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='DarkFeatureBand'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:green|navy)$/]",
+    "message": "<DarkFeatureBand> tone must be one of 'green' | 'navy'."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='HeroPhotoCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|alt|label|tone|height|radius|children|style|key|ref|className|style|children)$/]",
+    "message": "<HeroPhotoCard> doesn't accept that prop. Declared props: src, alt, label, tone, height, radius, children, style."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='HeroPhotoCard'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:stone|blue|green|navy)$/]",
+    "message": "<HeroPhotoCard> tone must be one of 'stone' | 'blue' | 'green' | 'navy'."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|strokeWidth|color|style|key|ref|className|style|children)$/]",
+    "message": "<Icon> doesn't accept that prop. Declared props: name, size, strokeWidth, color, style."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='NavBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:links|active|onNavigate|onDark|ctaLabel|onCta|key|ref|className|style|children)$/]",
+    "message": "<NavBar> doesn't accept that prop. Declared props: links, active, onNavigate, onDark, ctaLabel, onCta."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='ProductCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|name|description|ctaLabel|onCta|features|key|ref|className|style|children)$/]",
+    "message": "<ProductCard> doesn't accept that prop. Declared props: eyebrow, name, description, ctaLabel, onCta, features."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='StatusChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|dot|key|ref|className|style|children)$/]",
+    "message": "<StatusChip> doesn't accept that prop. Declared props: children, tone, dot."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='StatusChip'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:neutral|live|warm|info)$/]",
+    "message": "<StatusChip> tone must be one of 'neutral' | 'live' | 'warm' | 'info'."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='TextField'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|placeholder|value|onChange|type|multiline|error|required|name|style|key|ref|className|style|children)$/]",
+    "message": "<TextField> doesn't accept that prop. Declared props: label, placeholder, value, onChange, type, multiline, error, required, name, style."
+  },
+  {
+    "selector": "JSXOpeningElement[name.name='TrustLogoStrip'] > JSXAttribute > JSXIdentifier[name!=/^(?:caption|logos|onDark|key|ref|className|style|children)$/]",
+    "message": "<TrustLogoStrip> doesn't accept that prop. Declared props: caption, logos, onDark."
+  }
+]

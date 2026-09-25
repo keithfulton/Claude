@@ -1,0 +1,4 @@
+/* Proprietary CohereText, Unica77 Cohere Web and CohereMono are not bundled.
+   Substitutes (Google Fonts): Space Grotesk → CohereText, Inter → Unica77, Space Mono → CohereMono.
+   Drop real .woff2 files into src/assets/fonts/ and replace these imports with @font-face rules. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@400;500&family=Space+Mono:wght@400&display=swap');
