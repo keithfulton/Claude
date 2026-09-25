@@ -1,0 +1,17 @@
+:root{
+--space-xxs:2px;--space-xs:6px;--space-sm:8px;--space-md:12px;--space-lg:16px;--space-xl:24px;--space-xxl:32px;--space-section:80px;
+--space-10:10px;--space-20:20px;--space-22:22px;--space-28:28px;--space-36:36px;--space-40:40px;--space-56:56px;--space-60:60px;--space-64:64px;
+
+--radius-xs:4px;--radius-sm:8px;--radius-md:16px;--radius-lg:22px;--radius-xl:30px;--radius-pill:32px;--radius-full:9999px;
+
+/* Cohere is flat: depth via surfaces + hairlines, not shadow */
+--shadow-none:none;
+--elev-bordered:inset 0 0 0 1px var(--cohere-hairline);
+--focus-ring-shadow:0 0 0 2px var(--cohere-canvas),0 0 0 4px var(--cohere-focus-blue);
+
+--ease-standard:cubic-bezier(0.2,0,0,1);/* @kind other */
+--duration-fast:150ms;/* @kind other */
+--duration-base:240ms;/* @kind other */
+
+--container-max:1440px;--container-pad:40px;--announcement-height:36px;--nav-height:64px;
+}

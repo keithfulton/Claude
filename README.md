@@ -1,25 +1,60 @@
-# CODING AGENTS: READ THIS FIRST
+# Cohere Design System — React
 
-This is a **handoff bundle** from Claude Design (claude.ai/design).
+Tokens, fonts and React components for Cohere's 2026 web system, built from the Claude Design export in `project/`. The design guide (voice, visual foundations, iconography, fonts) is in [DESIGN.md](DESIGN.md).
 
-A user mocked up designs in HTML/CSS/JS using an AI design tool, then exported this bundle so a coding agent can implement the designs for real.
+## Use it
 
-## What you should do — IMPORTANT
+```tsx
+import '@cohere-design/react/styles.css'; // once, at the app root
+import { Button, NavBar, DarkFeatureBand, CapabilityCard } from '@cohere-design/react';
 
-**Read the chat transcripts first.** There are 1 chat transcript(s) in `chats/`. The transcripts show the full back-and-forth between the user and the design assistant — they tell you **what the user actually wants** and **where they landed** after iterating. Don't skip them. The final HTML files are the output, but the chat is where the intent lives.
+<NavBar onCta={() => navigate('/contact')} />
+<Button variant="secondary" icon="arrow-right">Explore products</Button>
+```
 
-**Find the primary design file under `project/` and read it top to bottom.** The chat transcripts will tell you which file the user was last iterating on. Then **follow its imports**: open every file it pulls in (shared components, CSS, scripts) so you understand how the pieces fit together before you start implementing.
+`react` and `react-dom` (18 or newer) are peer dependencies. Icons come from `lucide-react`; the `Icon` component ships the glyphs the system uses, and `registerIcons({ 'bar-chart': BarChart })` adds more.
 
-**If anything is ambiguous, ask the user to confirm before you start implementing.** It's much cheaper to clarify scope up front than to build the wrong thing.
+The CSS is custom properties on `:root`: base values (`--cohere-deep-green`, `--font-display`, `--space-xl`, `--radius-lg`) and semantic aliases (`--surface-card`, `--text-secondary`, `--border-rule`). Use them in your own styles too.
 
-## About the design files
+## Components
 
-The design medium is **HTML/CSS/JS** — these are prototypes, not production code. Your job is to **recreate them pixel-perfectly** in whatever technology makes sense for the target codebase (React, Vue, native, whatever fits). Match the visual output; don't copy the prototype's internal structure unless it happens to fit.
+| Group | Components |
+| --- | --- |
+| actions | `Button` (primary, secondary, pill-outline; `onDark`) |
+| core | `Icon`, `registerIcons` |
+| navigation | `AnnouncementBar`, `NavBar` |
+| marketing | `HeroPhotoCard`, `TrustLogoStrip`, `CapabilityCard`, `DarkFeatureBand`, `ProductCard` |
+| product | `AgentConsoleCard`, `StatusChip` |
+| editorial | `BlogFilterChip`, `ResearchTable` |
+| forms | `TextField`, `ContactFormCard` |
+| footer | `FooterNewsletter` |
 
-**Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
+Props are typed and documented in each `src/components/<group>/<Name>.tsx`; a short usage note sits next to it as `<Name>.md`.
 
-## Bundle contents
+## Develop
 
-- `README.md` — this file
-- `chats/` — conversation transcripts (read these!)
-- `project/` — the `Cohere Design System` project files (HTML prototypes, assets, components)
+```sh
+npm install
+npm run dev         # demo: website kit at /, /components.html, /foundations.html, /thumbnail.html
+npm run build       # library → dist/index.js, dist/styles.css, dist/types
+npm run build:demo  # static demo → dist-demo/
+npm test            # component behaviour + parity with the design export
+npm run typecheck
+npm run lint        # oxlint with the design-system adherence rules
+```
+
+### Adherence lint
+
+`.oxlintrc.json` carries the rules from the export's `_adherence.oxlintrc.json`: import components from the package entry, use color and spacing tokens rather than raw hex/px strings, use the system's font families, and pass only the props and enum values each component declares. oxlint has no `no-restricted-syntax`, so those selectors run through a small JS plugin (`lint/adherence.js`, selectors in `lint/adherence-rules.json`). The rules are off for `src/`, where the tokens and components themselves are defined. Copy both files into a consuming app to lint it the same way.
+
+## Placeholders
+
+The export shipped no logo, photography, customer logos or font files:
+
+- **Fonts:** CohereText, Unica77 Cohere Web and CohereMono are referenced first; Space Grotesk, Inter and Space Mono (Google Fonts) stand in. To use the real ones, add the `.woff2` files under `src/assets/fonts/` and replace the Google Fonts `@import` in `src/tokens/fonts.css` with `@font-face` rules.
+- **Logo:** "cohere" is set in the display face wherever the wordmark goes (`NavBar`, `FooterNewsletter`, thumbnail).
+- **Imagery:** `HeroPhotoCard` shows a labelled slot until you pass `src`.
+
+## Source
+
+`project/` is the unmodified Claude Design export (HTML/JSX prototypes, specimen cards, generated `_ds_bundle.js`, `_ds_manifest.json`, `_adherence.oxlintrc.json`, and the only brand source, `uploads/DESIGN-cohere.md`). `chats/` holds the design conversation and `HANDOFF.md` the export's instructions.

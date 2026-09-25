@@ -1,0 +1,43 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "**/src/components/**",
+              "@cohere-design/react/dist/*"
+            ],
+            "message": "Import design-system components from the package entry ('@cohere-design/react' or 'src/index'), not component internals."
+          }
+        ]
+      }
+    ],
+    "adherence/restricted-syntax": "warn"
+  },
+  "overrides": [
+    {
+      "files": [
+        "src/**"
+      ],
+      "rules": {
+        "no-restricted-imports": "off",
+        "adherence/restricted-syntax": "off"
+      }
+    }
+  ],
+  "jsPlugins": [
+    "./lint/adherence.js"
+  ]
+}
