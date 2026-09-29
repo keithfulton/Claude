@@ -1,0 +1,35 @@
+{
+  "name": "KEITH FULTON",
+  "initials": "KF",
+  "partner": "CLAUDE",
+  "tagline": "DESIGN · CODE · MOTION · SOUND",
+  "cta": "Let's build something.",
+  "year": "2026",
+  "bpm": 120,
+  "duration": 24,
+  "palette": {
+    "bg": "#07070A",
+    "panel": "#101017",
+    "text": "#F2F2F5",
+    "dim": "#8A8A99",
+    "lime": "#C8FF2E",
+    "violet": "#7C5CFF",
+    "coral": "#FF5B3A",
+    "ice": "#9FE8FF"
+  },
+  "scenes": [
+    { "label": "BOOT" },
+    { "label": "INTRO" },
+    { "label": "CODE", "prompt": "write the render engine: canvas, 30fps, deterministic" },
+    { "label": "DESIGN SYSTEMS", "prompt": "build a design system from this brand doc" },
+    { "label": "WEBSITES", "prompt": "ship a booking site for Prodigy Rentals" },
+    { "label": "MOTION", "prompt": "make it move. kinetic type, particles. go all out." },
+    { "label": "SOUND", "prompt": "score it, every hit synced to the cuts" },
+    { "label": "DATA", "prompt": "chart the numbers behind this reel" },
+    { "label": "CONNECTED", "prompt": "connect figma, higgsfield, github, notion..." },
+    { "label": "MONTAGE" },
+    { "label": "END" }
+  ],
+  "tools": ["FIGMA", "HIGGSFIELD", "ADOBE", "CANVA", "GITHUB", "NOTION", "SLACK", "DRIVE", "HYPERFRAMES", "STRIPE"],
+  "montage": ["BRANDS", "SITES", "FILMS", "DECKS", "APPS", "SYSTEMS", "SOUND", "STORIES"]
+}
